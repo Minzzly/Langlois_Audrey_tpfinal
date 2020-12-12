@@ -1,0 +1,15 @@
+.hero{
+  background-image: url("../images/hero.jpg");
+  background-position: center;
+  margin-top:var(--margin-huge);
+  padding:var(--padding-huge) 0;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .slogan{
+    font-size:var(--fz-link) ;
+  }
+}

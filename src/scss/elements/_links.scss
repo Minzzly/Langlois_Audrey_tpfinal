@@ -1,0 +1,21 @@
+// STYLE DE BASE DE TOUS LES LIENS ET BOUTON DU SITE
+
+a{
+  font-family: var(--ff-title-primary);
+  font-size:var(--fz-link);
+  transition: color 500ms ease-out;
+
+  &:link{
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  &:visited{
+    color: var(--color-link-visited);
+  }
+
+  &:hover{
+    color: var(--color-link-hover);
+    text-decoration: underline;
+  }
+}

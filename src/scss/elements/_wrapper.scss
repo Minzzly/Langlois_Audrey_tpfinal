@@ -1,0 +1,19 @@
+// STYLE DE BASE DU WRAPPER
+
+.wrapper{
+  max-width: var(--max-width);
+  min-width: var(--min-width);
+  margin: 0 auto;
+}
+
+
+// Utilisation du css Layout Grid pour faire le wrapper
+.grid-wrapper{
+  display: grid;
+  grid-template-columns: auto minmax(var(--min-width), var(--max-width)) auto;
+  grid-column-gap: 30px;
+}
+
+.grid-center{
+  grid-column: 2/3;
+}

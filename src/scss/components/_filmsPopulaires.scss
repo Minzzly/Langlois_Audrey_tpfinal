@@ -1,0 +1,21 @@
+.filmsPopulaires{
+  h2{
+    margin-top:0;
+  }
+  .filmPopulaire{
+    background: var(--color-bg-secondary);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .textFilm{
+      text-align: center;
+      margin:var(--margin-small) 0;
+    }
+
+    h3{
+      margin:0;
+    }
+  }
+}

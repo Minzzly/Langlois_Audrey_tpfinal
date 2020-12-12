@@ -1,0 +1,30 @@
+//FICHIER DE CONFIGURATION POUR LES ÉLÉMENTS TITRE DE LA PAGE
+
+
+h1, h2, h3, h4{
+  font-family: var(--ff-title-primary);
+  line-height: var(--lh-thin);
+  font-weight: var(--fw-bold);
+}
+
+h1{
+  margin:0;
+  font-size: var(--fz-h1);
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: var(--fz-h2);
+  text-transform: uppercase;
+  background: var(--color-bg-secondary);
+  padding:var(--padding-large);
+  margin:var(--margin-small) 0;
+}
+
+h3{
+  font-size: var(--fz-h3);
+}
+
+h4{
+  font-size: var(--fz-h4);
+}

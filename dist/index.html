@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TIMflix</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Puritan:wght@400;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+<body>
+
+
+<nav>
+    <div class="wrapper">
+        <a href="index.html"><img src="images/Logo.svg" alt="logo du site" class="logo"></a>
+
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="">À propos</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">Abonnement</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<header class="hero">
+    <h1 class="titre">Timflix</h1>
+    <p class="slogan">Tout le monde est critique de cinéma.</p>
+</header>
+
+
+<section class="filmsPopulaires">
+    <h2>Les films les plus populaires</h2>
+
+    <div class="wrapper">
+        <div class="swiper-container swiper">
+            <div class="swiper-wrapper">
+                <article class="filmPopulaire swiper-slide">
+                    <img src="images/image-temp.jpg" alt="">
+                    <div class="textFilm">
+                        <h3>Titre</h3>
+                        <p>Description</p>
+                        <button><a href="fiche-film.html">En savoir plus</a></button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+
+<section class="filmsNoter">
+    <h2>Les films les mieux notés</h2>
+    <div class="wrapper">
+    <article>
+        <div class="filmNoter">
+            <img src="images/image-temp.jpg" alt="">
+            <h3>Titre</h3>
+            <div class="noteFilm">
+                <p>Note</p>
+                <span class="material-icons">star_rate</span>
+            </div>
+            <p>Description</p>
+            <button><a href="fiche-film.html">En savoir plus</a></button>
+        </div>
+    </article>
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="wrapper">
+        <p class="copyright">Audrey Langlois©. Tous droits réservés</p>
+        <img src="images/logoTHDB.svg" alt="" class="logomovieDb">
+        <a href=""><span class="material-icons">arrow_upward</span></a>
+    </div>
+
+</footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="js/script.js" defer></script>
+
+</body>
+</html>
