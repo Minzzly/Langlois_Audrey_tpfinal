@@ -1,9 +1,23 @@
 .infoPrincipalFilm{
+  .sectionInfo{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+  }
+  hr{
+    margin:0;
+  }
+
   .info{
     display: flex;
     align-items: center;
     p{
       margin-right:var(--margin-thin);
     }
+  }
+
+  .description{
+    padding-top:var(--padding-small);
   }
 }
