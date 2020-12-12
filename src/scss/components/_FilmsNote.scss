@@ -1,0 +1,22 @@
+.filmsNoter{
+  .filmNoter{
+    width:32%;
+    padding-bottom:var(--margin-small);
+    background:var(--color-bg-secondary);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3{
+      margin-bottom:0;
+    }
+
+    .noteFilm{
+      display: flex;
+      align-items: center;
+      .material-icons{
+        margin-top: -5px;
+      }
+    }
+  }
+}
