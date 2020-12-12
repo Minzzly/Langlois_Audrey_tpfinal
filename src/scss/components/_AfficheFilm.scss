@@ -1,0 +1,9 @@
+.infoPrincipalFilm{
+  .info{
+    display: flex;
+    align-items: center;
+    p{
+      margin-right:var(--margin-thin);
+    }
+  }
+}
