@@ -1,21 +1,43 @@
 .filmsPopulaires{
-  h2{
-    margin-top:0;
-  }
   .filmPopulaire{
-    background: var(--color-bg-secondary);
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    img{
+      height:570px;
+      object-fit: cover;
 
-    .textFilm{
-      text-align: center;
-      margin:var(--margin-small) 0;
+      position:relative;
     }
 
-    h3{
-      margin:0;
+    .textFilm{
+      position:absolute;
+      bottom:0;
+
+      background: var(--color-bg-secondary);
+      width:100%;
+      margin-top:auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      opacity: 0;
+      transition: opacity 300ms ease-out;
+
+      .noteFilm{
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    &:hover{
+      .textFilm{
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(1){
+      display:none;
     }
   }
 }

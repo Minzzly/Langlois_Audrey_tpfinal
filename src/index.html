@@ -12,9 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Puritan:wght@400;700&display=swap"
           rel="stylesheet">
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/main.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
 </head>
 <body>
@@ -45,13 +44,17 @@
 
     <div class="wrapper">
         <div class="swiper-container swiper">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper swiperFilmPopulaires">
                 <article class="filmPopulaire swiper-slide">
                     <img src="images/image-temp.jpg" alt="">
+
                     <div class="textFilm">
                         <h3>Titre</h3>
-                        <p>Description</p>
-                        <button><a href="fiche-film.html">En savoir plus</a></button>
+                        <div class="noteFilm">
+                            <p>Note</p>
+                            <span class="material-icons">star_rate</span>
+                        </div>
+                        <button><a href="fiche-film.html"> En savoir plus </a></button>
                     </div>
                 </article>
             </div>
@@ -65,17 +68,17 @@
 <section class="filmsNoter">
     <h2>Les films les mieux notés</h2>
     <div class="wrapper">
-        <article>
-            <div class="filmNoter">
+        <article class="filmNoter">
                 <img src="images/image-temp.jpg" alt="">
-                <h3>Titre</h3>
-                <div class="noteFilm">
-                    <p>Note</p>
-                    <span class="material-icons">star_rate</span>
+
+                <div class="textFilm">
+                    <h3>Titre</h3>
+                    <div class="noteFilm">
+                        <p>Note</p>
+                        <span class="material-icons">star_rate</span>
+                    </div>
+                    <button><a href="fiche-film.html">En savoir plus</a></button>
                 </div>
-                <p>Description</p>
-                <button><a href="fiche-film.html">En savoir plus</a></button>
-            </div>
         </article>
     </div>
 </section>
@@ -85,7 +88,7 @@
     <div class="wrapper">
         <p class="copyright">Audrey Langlois©. Tous droits réservés</p>
         <a href="https://www.themoviedb.org/" target="_blank"><img src="images/logoTHDB.svg" alt="" class="logomovieDb"></a>
-        <a href=""><span class="material-icons">arrow_upward</span></a>
+        <span class="material-icons flecheMonte">arrow_upward</span>
     </div>
 </footer>
 

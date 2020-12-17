@@ -19,3 +19,13 @@ a{
     text-decoration: underline;
   }
 }
+
+.flecheMonte{
+  cursor:pointer;
+  color:var(--color-link);
+
+  transition: color 500ms ease-out;
+  &:hover{
+    color:var(--color-link-hover);
+  }
+}

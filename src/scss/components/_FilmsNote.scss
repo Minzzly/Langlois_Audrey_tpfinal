@@ -1,22 +1,53 @@
 .filmsNoter{
-  .filmNoter{
-    width:32%;
-    padding-bottom:var(--margin-small);
-    background:var(--color-bg-secondary);
+  .wrapper{
     display:flex;
-    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
-    h3{
-      margin-bottom:0;
-    }
+    justify-content: space-between;
 
-    .noteFilm{
-      display: flex;
-      align-items: center;
-      .material-icons{
-        margin-top: -5px;
+    .filmNoter{
+      width:32%;
+      position:relative;
+
+      &:hover{
+        .textFilm{
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(1){
+        display:none;
+      }
+
+      img{
+        height:570px;
+        object-fit: cover;
+      }
+
+      .textFilm{
+        position:absolute;
+        bottom:0;
+
+        background: var(--color-bg-secondary);
+        width:100%;
+        margin-top:auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        opacity: 0;
+        transition: opacity 300ms ease-out;
+
+        .noteFilm{
+          display: flex;
+          align-items: center;
+        }
       }
     }
+
   }
+
 }
