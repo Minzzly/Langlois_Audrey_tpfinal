@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Puritan:wght@400;700&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
 
-    <script src="js/script.js" defer></script>
 </head>
 <body>
 <nav>
@@ -72,27 +72,36 @@
             <p class="description">Description du film</p>
         </article>
     </div>
-
-        <article class="acteurs">
-            <h2>Acteurs</h2>
-            <div class="wrapper">
-                <div class="acteur">
-                    <img src="images/image-temp.jpg" alt="">
-                    <h4 class="nom">Nom</h4>
-
-                </div>
-            </div>
-
-        </article>
 </section>
 
-<footer>
-    <div class="wrapper">
-        <p class="copyright">Audrey Langlois©. Tous droits réservés</p>
-        <a href="https://www.themoviedb.org/" target="_blank"><img src="images/logoTHDB.svg" alt="" class="logomovieDb"></a>
-        <a href=""><span class="material-icons">arrow_upward</span></a>
-    </div>
+    <section class="acteurs">
+        <h2>Acteurs</h2>
 
-</footer>
+        <div class="wrapper">
+            <div class="swiper-container swiper-2">
+                <div class="swiper-wrapper swiperActeurs">
+                    <article class="acteur swiper-slide">
+                        <img src="images/image-temp.jpg" alt="">
+                        <h4 class="nom">Nom</h4>
+                    </article>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrapper">
+            <p class="copyright">Audrey Langlois©. Tous droits réservés</p>
+            <a href="https://www.themoviedb.org/" target="_blank"><img src="images/logoTHDB.svg" alt=""
+                                                                       class="logomovieDb"></a>
+            <a href=""><span class="material-icons">arrow_upward</span></a>
+        </div>
+
+    </footer>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>

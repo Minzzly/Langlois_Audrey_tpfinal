@@ -16,6 +16,34 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.location.pathname.search("fiche-film.html") > 0) {
         let params = new URL(document.location).searchParams;
         initDB.requestInfoFilm(params.get("id"));
+        initDB.requeteActeur(params.get("id"));
+
+        var mySwiper = new Swiper('.swiper-2', {
+
+            slidesPerView: 3,
+            spaceBetween: 10,
+            grabCursor: true,
+            // Responsive breakpoints
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                780: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1000: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            }
+
+        });
    }
     else {
         initDB.requeteFilmsPopulaires();
@@ -144,7 +172,6 @@ class MovieDB {
         //console.log('ça marche');
         let target = event.currentTarget;
         let data = JSON.parse(target.responseText);
-        console.log(data);
         this.afficheInfoFilm(data);
     }
 
@@ -168,15 +195,35 @@ class MovieDB {
     requeteActeur(movieId){
         //GET Credits(moviedb)-requete AJAX
         let request = new XMLHttpRequest();
-        request.addEventListener('loadend', this.retourRequeteFilmsPopulaires.bind(this));
-        request.open('GET', this.baseURL + 'movie/popular?api_key=' + this.appiKey + '&language=' + this.lang + '&page=1')
+        request.addEventListener('loadend', this.retourRequeteActeur.bind(this));
+        request.open("GET",this.baseURL + "movie/" + movieId + "/credits?api_key=" + this.appiKey);
         request.send();
     }
-    retourRequeteActeur(){
-        //Faire attention au JSON...il n'y a pas de results
+    retourRequeteActeur(event){
+        //Faire attention au JSON...il n'y a pas de resultats
+        let target = event.currentTarget;
+        let data = JSON.parse(target.responseText);
+        console.log(data.cast);
+        this.afficheActeur(data);
     }
-    afficheActeur(){
+    afficheActeur(data){
+        let section = document.querySelector(".swiperActeurs");
         //boucle pour afficher tous les acteur avec un cloneNode
+        for (let i = 0; i < data.cast.length; i++) {
+            let article = document.querySelector(".acteur").cloneNode(true);
+            article.querySelector(".nom").innerHTML = data.cast[i].name;
+
+            let src = this.imgPath + "w500" + data.cast[i].profile_path ;
+            if(data.cast[i].profile_path==null){
+                src = "images/image-temp.jpg"
+            }
+            let image = article.querySelector(".acteur img");
+            image.setAttribute("src", src);
+            image.setAttribute("alt", data.cast.title);
+
+            section.appendChild(article);
+        }
+
     }
 }
 

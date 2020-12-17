@@ -1,0 +1,11 @@
+.swiperActeurs{
+  .acteur{
+    &:nth-child(1){
+      display:none;
+    }
+
+    .nom{
+      text-align: center;
+    }
+  }
+}
