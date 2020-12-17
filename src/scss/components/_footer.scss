@@ -6,8 +6,18 @@ footer{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    img{
+    .logoMovieDb{
       width:30%;
+    }
+
+    .groupeLogoMedias{
+      svg{
+        fill:var(--color-link);
+        margin-right:var(--margin-thin);
+        :hover{
+          fill:var(--color-link-hover);
+        }
+      }
     }
   }
 }
