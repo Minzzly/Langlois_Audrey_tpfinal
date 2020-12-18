@@ -44,64 +44,11 @@ document.addEventListener("DOMContentLoaded", function () {
         let params = new URL(document.location).searchParams;
         initDB.requestInfoFilm(params.get("id"));
         initDB.requeteActeur(params.get("id"));
-
-        //---------------------------------------SWIPER FICHE-FILM----------------------------------------------------------------
-        var mySwiper = new Swiper('.swiper-2', {
-
-            slidesPerView: 1,
-            spaceBetween: 10,
-            grabCursor: true,
-            // Responsive breakpoints
-            breakpoints: {
-                375: {
-                    slidesPerView: 1,
-                    spaceBetween: 30
-                },
-                780: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                },
-                1000: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                },
-            },
-
-            pagination: {
-                el: '.swiper-pagination',
-            }
-
-        });
    }
     else {
         initDB.requeteFilmsPopulaires();
         initDB.requeteFilmsNote();
 
-        //-----------------------------SWIPER INDEX-------------------------------------------------------
-        var mySwiper = new Swiper('.swiper',{
-            slidesPerView: 1,
-            spaceBetween: 10,
-            grabCursor: true,
-            // Responsive breakpoints
-            breakpoints: {
-                375: {
-                    slidesPerView: 1,
-                    spaceBetween: 30
-                },
-                780: {
-                    slidesPerView: 2,
-                    spaceBetween: 30
-                },
-                1000: {
-                    slidesPerView: 3,
-                    spaceBetween: 30
-                },
-            },
-
-            pagination: {
-                el: '.swiper-pagination',
-            }
-        });
     }
 });
 
@@ -151,7 +98,36 @@ class MovieDB {
 
 
             section.appendChild(article);
+
+
         }
+
+//SWIPER INDEX
+        var mySwiper = new Swiper('.swiper',{
+            slidesPerView: 1,
+            spaceBetween: 10,
+            grabCursor: true,
+            // Responsive breakpoints
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                780: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1000: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        });
+
     }
 
     requeteFilmsNote() {
@@ -254,6 +230,33 @@ class MovieDB {
             section.appendChild(article);
         }
 
+        //---------------------------------------SWIPER FICHE-FILM----------------------------------------------------------------
+        var mySwiper = new Swiper('.swiper-2', {
+
+            slidesPerView: 1,
+            spaceBetween: 10,
+            grabCursor: true,
+            // Responsive breakpoints
+            breakpoints: {
+                375: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                780: {
+                    slidesPerView: 2,
+                    spaceBetween: 30
+                },
+                1000: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+            }
+
+        });
     }
 }
 
