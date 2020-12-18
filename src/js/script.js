@@ -225,7 +225,7 @@ class MovieDB {
             }
             let image = article.querySelector(".acteur img");
             image.setAttribute("src", src);
-            image.setAttribute("alt", data.cast.title);
+            image.setAttribute("alt", data.cast[i].name);
 
             section.appendChild(article);
         }
