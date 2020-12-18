@@ -1,4 +1,7 @@
 .filmsPopulaires{
+  .wrapper{
+    padding:0 var(--padding-small);
+  }
   .filmPopulaire{
     img{
       height:570px;

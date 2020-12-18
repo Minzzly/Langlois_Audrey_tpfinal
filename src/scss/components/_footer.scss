@@ -1,23 +1,64 @@
-footer{
-  background:var(--color-bg-secondary);
-  .wrapper{
-    margin-top:var(--margin-thin);
-    padding:var(--padding-small) 0;
-    display:flex;
+footer {
+  background: var(--color-bg-secondary);
+
+  .wrapper {
+    margin-top: var(--margin-thin);
+    padding: var(--padding-small) 0;
+    display: flex;
     justify-content: space-between;
-    align-items:center;
-    .logoMovieDb{
-      width:30%;
+    align-items: center;
+
+    .infoFooter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding-left:var(--padding-small);
     }
 
-    .groupeLogoMedias{
-      svg{
-        fill:var(--color-link);
-        margin-right:var(--margin-thin);
-        :hover{
-          fill:var(--color-link-hover);
+    .copyright {
+      margin-right: var(--margin-small);
+    }
+
+    .logoMovieDb {
+      width: 30%;
+    }
+
+    .groupeLogoMedias {
+      margin-right: var(--margin-large);
+
+      svg {
+        fill: var(--color-link);
+        margin-right: var(--margin-thin);
+
+        :hover {
+          fill: var(--color-link-hover);
         }
       }
     }
   }
 }
+
+@media screen and (max-width: $vw-medium) {
+  footer {
+    .wrapper {
+      .infoFooter {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .copyright {
+        margin-bottom: var(--margin-small);
+      }
+
+      .logoMovieDb {
+        width: 30%;
+      }
+
+      .groupeLogoMedias {
+        margin-bottom: var(--margin-small);
+      }
+    }
+  }
+}
+

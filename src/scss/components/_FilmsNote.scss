@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    padding:0 var(--padding-small);
 
     .filmNoter{
       width:32%;
@@ -51,3 +52,54 @@
   }
 
 }
+@media screen and (max-width:$vw-large){
+  .filmsNoter{
+    .wrapper{
+      .filmNoter{
+        img{
+          height:450px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$vw-medium){
+  .filmsNoter{
+    .wrapper{
+      .filmNoter{
+        width:48%;
+
+        img{
+          height:450px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$vw-small){
+  .filmsNoter{
+    .wrapper{
+      .filmNoter{
+        img{
+          height:350px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:$vw-thin){
+  .filmsNoter{
+    .wrapper{
+      .filmNoter{
+        width:90%;
+        img{
+          height:350px;
+        }
+      }
+    }
+  }
+}
+

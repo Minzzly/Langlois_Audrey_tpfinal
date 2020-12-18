@@ -1,6 +1,7 @@
 .hero{
   background-image: url("../images/hero.jpg");
   background-position: center;
+
   margin-top:var(--margin-huge);
   padding:var(--padding-huge) 0;
 
@@ -8,8 +9,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 
   .slogan{
     font-size:var(--fz-link) ;
+  }
+}
+
+@media screen and (max-width: $vw-medium){
+  .hero{
+    margin:0;
+  }
+}
+
+@media screen and (max-width: $vw-small){
+  .hero{
+    h1{
+      font-size: var(--fz-h1-media);
+    }
+    .slogan{
+      font-size: var(--fz-normal);
+    }
   }
 }

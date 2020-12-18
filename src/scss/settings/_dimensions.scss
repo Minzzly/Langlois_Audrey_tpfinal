@@ -3,6 +3,7 @@
 :root{
   // Dimension maximal
   --max-width: 1200px;
+  --min-width:375px;
 
   --padding-thin: 10px;
   --padding-small: 20px;
@@ -22,7 +23,7 @@
 
 
 // MEDIA QUERIES BREAKPOINTS
-$vw-thin: 320px;
+$vw-thin: 375px;
 $vw-small: 576px;
 $vw-medium: 768px;
 $vw-large: 1000px;

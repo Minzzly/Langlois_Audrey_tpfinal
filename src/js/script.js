@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    //SCROLL
     const scrollButton = document.querySelector('footer .material-icons');
 
     scrollButton.addEventListener('click', scrollToTop);
@@ -11,6 +12,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //----------------------------------------MENU MOBILE HAMBURGER-----------------------------------------------------
+
+    var hamburgers = document.querySelectorAll(".hamburgerAnim");
+    var menuMobile = document.querySelector(".navMobile");
+
+    for(let i=0; i< hamburgers.length; i++){
+        var hamburger = hamburgers[i];
+        hamburger.addEventListener("click",switchMenu);
+    }
+
+    function switchMenu(evt){
+        evt.preventDefault();
+
+        var cible = evt.currentTarget;
+
+        if(cible.classList.contains("open")){
+            cible.classList.remove("open");
+            menuMobile.classList.remove("open");
+        }
+        else{
+            cible.classList.add("open");
+            menuMobile.classList.add("open");
+        }
+    }
+
+    //------------------------------------MOVIE DATABASE---------------------------------------------------------------
     let initDB = new MovieDB();
 
     if (document.location.pathname.search("fiche-film.html") > 0) {
@@ -18,9 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
         initDB.requestInfoFilm(params.get("id"));
         initDB.requeteActeur(params.get("id"));
 
+        //---------------------------------------SWIPER FICHE-FILM----------------------------------------------------------------
         var mySwiper = new Swiper('.swiper-2', {
 
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 10,
             grabCursor: true,
             // Responsive breakpoints
@@ -49,8 +77,9 @@ document.addEventListener("DOMContentLoaded", function () {
         initDB.requeteFilmsPopulaires();
         initDB.requeteFilmsNote();
 
+        //-----------------------------SWIPER INDEX-------------------------------------------------------
         var mySwiper = new Swiper('.swiper',{
-            slidesPerView: 3,
+            slidesPerView: 1,
             spaceBetween: 10,
             grabCursor: true,
             // Responsive breakpoints
@@ -76,6 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+//--------------------------CODE MOVIE DATABASE--------------------------------------------------------
 class MovieDB {
     constructor() {
         console.log('new MovieDB()');

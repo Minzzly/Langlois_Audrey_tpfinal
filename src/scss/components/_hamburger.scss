@@ -1,0 +1,57 @@
+.navMobile{
+  display: none;
+
+  .hamburgerAnim {
+    position: relative;
+    background:none;
+    border:none;
+
+    .material-icons {
+      font-size: var(--fz-h1-media);
+      color: var(--color-text-primary);
+    }
+
+    .icon-open, .icon-close {
+      transition: .3s transform ease-out;
+    }
+
+    .icon-close {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform:translate(-50%, -50%) scale(0);
+    }
+
+    &.open {
+      .icon-open, .icon-close {
+        transition: .3s transform ease-out;
+      }
+
+      .icon-close {
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+      .icon-open {
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:$vw-medium){
+  .navMobile{
+    display:block;
+  }
+}
+
+@media screen and (max-width:$vw-small){
+  .navMobile {
+    .hamburgerAnim {
+      .material-icons {
+        font-size: var(--fz-h2);
+        color: var(--color-text-primary);
+      }
+    }
+  }
+}
